@@ -1,0 +1,29 @@
+<project name="salesforce" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+    <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
+            <pathelement location="../ant-salesforce.jar" />            
+        </classpath>
+    </taskdef>
+
+    <target name="deployRunAllTests">
+        <echo message="Steve is doing a deploy right now"/>
+      <sf:deploy username="${sf.username}" 
+        password="${sf.password}" 
+        serverurl="${sf.serverurl}" 
+        runAllTests="false"
+        logType="Detail"
+        deployRoot="classes"/>
+    </target>
+
+    <target name="undeployCode">
+      <sf:deploy username="${sf.username}" 
+        password="${sf.password}" 
+        serverurl="${sf.serverurl}" 
+        deployRoot="undeploy"/>
+    </target>    
+
+</project>
