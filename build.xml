@@ -16,7 +16,7 @@
         serverurl="${sf.serverurl}" 
         runAllTests="false"
         logType="Detail"
-        deployRoot="classes"/>
+        deployRoot="src"/>
     </target>
 
     <target name="undeployCode">
