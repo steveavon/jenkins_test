@@ -9,11 +9,21 @@
         </classpath>
     </taskdef>
 
-    <target name="deployRunAllTests">
-        <echo message="Steve is doing a deploy right now"/>
+    <target name="deployToPanther17">
+        <echo message="Deploying to Panther17"/>
       <sf:deploy username="${sf1.username}" 
         password="${sf1.password}" 
-        serverurl="${sf1.serverurl}" 
+        serverurl="${sf.serverurl}" 
+        runAllTests="true"
+        logType="Detail"
+        deployRoot="src"/>
+    </target> 
+
+    <target name="deployToTurkey17">
+        <echo message="Deploying to Turkey17"/>
+      <sf:deploy username="${sf1.username}" 
+        password="${sf1.password}" 
+        serverurl="${sf.serverurl}" 
         runAllTests="true"
         logType="Detail"
         deployRoot="src"/>
