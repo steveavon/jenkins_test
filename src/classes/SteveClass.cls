@@ -7,6 +7,7 @@ public class SteveClass {
     //trying with branching
 
     //just changing this class to see if the other class is changed
-    Integer 234 = asdwer;
-    //haha
+    Integer test = 123;
+    //haha 
+    //get to enable 
 }
