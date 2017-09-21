@@ -1,8 +1,4 @@
-public class SteveClass {
+public class SteveClass2 {
 
-    //test
-    //another test
-    //test 3
-
-    //trying with branching
+    //here is another class
 }
